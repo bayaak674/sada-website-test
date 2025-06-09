@@ -355,6 +355,9 @@ section#work > .container {
     text-decoration: none;
     line-height: 1.1;
     transition: color 0.3s ease;
+    /* THIS IS THE FIX: Allows the long email address to wrap */
+    overflow-wrap: break-word;
+    word-wrap: break-word; /* Older fallback */
 }
 .contact-email-link:hover {
     color: #FF4081;
@@ -384,7 +387,7 @@ section#work > .container {
 .main-footer {
     padding: 60px 0;
     text-align: center;
-    overflow: hidden; /* This is the fix for the horizontal scroll issue */
+    overflow: hidden; /* Fixes horizontal scroll from the large brand text */
 }
 .main-footer .footer-links {
     display: flex;
