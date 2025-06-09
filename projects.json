@@ -1,0 +1,87 @@
+[
+    {
+        "id": "nervana",
+        "featured": true,
+        "title": "Nervana",
+        "description": "The pain free era",
+        "longDescription": "We partnered with Nervana to redefine their brand identity and create a web experience that communicates trust and innovation. The project involved in-depth user research, leading to a design that is both accessible and technologically forward-looking, setting a new standard in the health-tech industry.",
+        "thumbnail": "https://images.unsplash.com/photo-1598128558393-70ff21433be0?auto=format&fit=crop&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1598128558393-70ff21433be0?auto=format&fit=crop&q=80",
+            "https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?auto=format&fit=crop&q=80",
+            "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&q=80"
+        ],
+        "tags": [
+            "Art Direction",
+            "Branding",
+            "Web Development"
+        ]
+    },
+    {
+        "id": "runway",
+        "featured": true,
+        "title": "Runway",
+        "description": "The finance platform your team doesn't hate",
+        "longDescription": "We partnered with Runway Financial to craft a new identity and website that has users running to grab a window seat. Drawing inspiration from airport signage, wayfinding, and the air flight experience, the team created a first-class brand that stands out from the crowd.",
+        "thumbnail": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80",
+            "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&q=80",
+            "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&q=80"
+        ],
+        "tags": [
+            "Art Direction",
+            "Branding",
+            "Web Design",
+            "Web Development"
+        ]
+    },
+    {
+        "id": "campfire",
+        "featured": true,
+        "title": "Campfire",
+        "description": "Collaborative tools for the modern age",
+        "longDescription": "Campfire's mission is to bring teams together. Our task was to create a visual identity and a suite of marketing materials that felt warm, inviting, and collaborative. The result is a brand that feels both professional and human.",
+        "thumbnail": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&q=80"
+        ],
+        "tags": [
+            "Art Direction",
+            "Branding",
+            "Development"
+        ]
+    },
+    {
+        "id": "journey",
+        "featured": false,
+        "title": "Journey",
+        "description": "An iOS app for mindful travelers.",
+        "longDescription": "For Journey, we designed an intuitive and beautiful iOS application that helps users plan and document their travels. The UI/UX was crafted to be a seamless and enjoyable part of the travel experience itself.",
+        "thumbnail": "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80"
+        ],
+        "tags": [
+            "iOS Design",
+            "UI/UX",
+            "Web Design"
+        ]
+    },
+    {
+        "id": "batata",
+        "featured": true,
+        "title": "batata",
+        "description": "batata batata",
+        "longDescription": "batata batatabatata batatabatata batatabatata batatabatata batatabatata batata",
+        "thumbnail": "assets/poject_example/ComfyUI_00324_.png",
+        "images": [
+            "assets/poject_example/ComfyUI_00324_.png",
+            "assets/poject_example/ComfyUI_00325_.png",
+            "assets/poject_example/ComfyUI_00326_.png"
+        ],
+        "tags": [
+            "food"
+        ]
+    }
+]

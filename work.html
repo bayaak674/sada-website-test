@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - Sada Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <video autoplay loop muted playsinline>
+            <source src="assets/loading_animation.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="dots-background"></div>
+
+    <div class="project-thumbnail-preview" id="project-thumbnail-viewer"></div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/web_logo.png" alt="Sada Studio Logo"></a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <div class="burger-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span class="menu-text">Menu</span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="full-screen-nav">
+        <button class="close-nav" aria-label="Close navigation">×</button>
+        <ul>
+            <li><a href="work.html" class="nav-link-item">Work</a></li>
+            <li><a href="index.html#about" class="nav-link-item">About</a></li>
+            <li><a href="index.html#contact" class="nav-link-item">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="work-page-main">
+        <header class="work-page-header">
+            <div class="container">
+                <h1 class="work-page-title">All Projects</h1>
+                <div class="work-page-description">
+                    <p>We are a design and technology partner for visionary companies. We create brand identities, digital experiences, and tangible products that are both beautiful and effective.</p>
+                    <p>Our work spans various industries, but our commitment to quality, innovation, and partnership remains constant. Explore our full portfolio below.</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="project-list-section">
+            <div class="container">
+                <div class="project-list" id="work-page-list">
+                    <!-- JS will populate this -->
+                </div>
+            </div>
+        </section>
+
+        <section class="page-cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <p>Ready to create something amazing with us?</p>
+                    <a href="index.html#contact" class="cta-link">Let's Talk</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <a href="work.html">Our Work</a>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <a href="#" target="_blank">LinkedIn</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Dribbble</a>
+                </div>
+            </div>
+            <div class="footer-brand">
+                Sada Studio ©
+            </div>
+        </div>
+    </footer>
+
+    <div class="cursor" id="cursor-leader"></div>
+    <div class="cursor cursor-trail"></div>
+    <div class="cursor cursor-trail"></div>
+    <div class="cursor cursor-trail"></div>
+    <div class="cursor cursor-trail"></div>
+    <div class="cursor cursor-trail"></div>
+    <div class="cursor cursor-trail"></div>
+    <div class="cursor cursor-trail"></div>
+    <div class="cursor cursor-trail"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
