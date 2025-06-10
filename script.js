@@ -1,32 +1,10 @@
-// --- NEW Preloader Logic with Minimum 3-Second Delay ---
-const preloader = document.getElementById('preloader');
-
-// Only run this logic if the preloader element exists
-if (preloader) {
-    let isPageLoaded = false;
-    let isTimerFinished = false;
-
-    // This function attempts to hide the preloader
-    const tryHidePreloader = () => {
-        // It will only succeed if both the timer is done AND the page has loaded
-        if (isPageLoaded && isTimerFinished) {
-            preloader.classList.add('hidden');
-        }
-    };
-
-    // 1. Listen for the entire page to finish loading
-    window.addEventListener('load', () => {
-        isPageLoaded = true;
-        tryHidePreloader(); // Attempt to hide
-    });
-
-    // 2. Set a timer for 3 seconds (3000 milliseconds)
-    setTimeout(() => {
-        isTimerFinished = true;
-        tryHidePreloader(); // Attempt to hide
-    }, 3000);
-}
-
+// --- Preloader Logic ---
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.classList.add('hidden');
+    }
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- Basic Setup ---
@@ -129,6 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const workPageList = document.getElementById('work-page-list');
     const projectDetailContainer = document.getElementById('project-detail-container');
 
+    // NEW: Helper function to check if a file is a video
+    const isVideo = (filename) => {
+        if (!filename) return false;
+        const lowercased = filename.toLowerCase();
+        return lowercased.endsWith('.webm') || lowercased.endsWith('.mp4');
+    };
+
     async function fetchProjects() {
         try {
             const response = await fetch(`projects.json?v=${new Date().getTime()}`);
@@ -153,9 +138,20 @@ document.addEventListener('DOMContentLoaded', () => {
             
             let tagsHTML = project.tags.map(tag => `<span>${tag}</span>`).join('');
 
+            // MODIFIED: Conditionally generate video or image tag
+            let mediaHTML = '';
+            if (isVideo(project.thumbnail)) {
+                mediaHTML = `
+                    <video autoplay loop muted playsinline class="work-img">
+                        <source src="${project.thumbnail}" type="video/webm">
+                    </video>`;
+            } else {
+                mediaHTML = `<img src="${project.thumbnail}" alt="${project.title} Project Thumbnail" class="work-img">`;
+            }
+
             projectItem.innerHTML = `
                 <div class="work-image-container">
-                     <img src="${project.thumbnail}" alt="${project.title} Project Thumbnail" class="work-img">
+                     ${mediaHTML}
                 </div>
                 <div class="work-info-tab">
                     <div class="work-info">
@@ -177,7 +173,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const projectItem = document.createElement('a');
             projectItem.href = `project.html?id=${project.id}`;
             projectItem.className = 'project-item';
-            projectItem.dataset.image = project.thumbnail;
+            
+            // IMPORTANT: The hover preview will only work for images.
+            if (!isVideo(project.thumbnail)) {
+                projectItem.dataset.image = project.thumbnail;
+            }
 
             let tagsHTML = project.tags.map(tag => `<span>${tag}</span>`).join('');
 
@@ -201,7 +201,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (project) {
             document.title = `${project.title} - Sada Studio`;
             const tagsHTML = project.tags.map(tag => `<span>${tag}</span>`).join('');
-            const imagesHTML = project.images.map(imgSrc => `<img src="${imgSrc}" alt="${project.title} gallery image">`).join('');
+            
+            // MODIFIED: Handle both images and videos in the gallery
+            const imagesHTML = project.images.map(mediaSrc => {
+                if (isVideo(mediaSrc)) {
+                    return `<video autoplay loop muted playsinline><source src="${mediaSrc}" type="video/webm"></video>`;
+                } else {
+                    return `<img src="${mediaSrc}" alt="${project.title} gallery image">`;
+                }
+            }).join('');
 
             projectDetailContainer.innerHTML = `
                 <div class="project-info-wrapper">
