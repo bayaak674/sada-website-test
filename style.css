@@ -412,9 +412,10 @@ body.invert-colors .footer-logo { filter: invert(1); }
     .work-grid { 
         grid-template-columns: 1fr; 
     }
+    /* THIS IS THE FIX: All items get a taller aspect ratio on mobile */
     .work-item, .work-item.work-item-large { 
         grid-column: span 1; 
-        aspect-ratio: 16 / 10; 
+        aspect-ratio: 4 / 5; 
     }
     .bottom-cta-text { flex-direction: column; gap: 2rem; }
     section#work > .container { padding-left: 40px; padding-right: 40px; }
